@@ -3,10 +3,9 @@
 
 
 
-**AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
+AIM:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
-
-**COMPONENTS REQUIRED:**
+COMPONENTS REQUIRED:
 1.	10 KΩPOT
 2.	1 KΩ resistor 
 3.	Arduino Uno 
@@ -16,9 +15,9 @@
 **
 
 
-**THEORY**: 
+THEORY: 
 
-**Analog signals:**
+Analog signals:
 
 Analog signals – directly measurable quantities in terms of some other quantity.
 Examples:
@@ -49,10 +48,10 @@ CIRCUIT DIAGRAM
 
 ![image](https://user-images.githubusercontent.com/36288975/163530788-eec3cdc3-95e8-4d2d-8349-6d0ea4c9439c.png)
 
-**FIGURE -01
-**
+FIGURE -01
 
-**PROCEDURE:**
+
+PROCEDURE:
 
 1.	Connect the circuit as per the circuit diagram 
 2.	Connect the board to your computer via the USB cable.
@@ -66,23 +65,41 @@ CIRCUIT DIAGRAM
 
 
 
-**PROGRAM** 
- 
+PROGRAM: 
+```
+NAME: Balaji J
+ROLL NO: 22000048
+
+int potPin = A5;
+int ledPin = 2;
+void setup()
+{
+   pinMode(potPin,INPUT);
+   pinMode(ledPin, OUTPUT);
+   Serial.begin(9600);
+}
+void loop()
+{
+int PotMeasure = analogRead(A5);
+if(PotMeasure>=450)
+{
+   digitalWrite(2, HIGH);
+}
+else
+   digitalWrite(2, LOW);
+}
+
+
+```
 
 
 
 
+Simulation output:
 
 
 
-
-
-**
-**Simulation output:** 
-**
-
-
-[My image](username.github.com/repository/img/image.jpg)
+![My image](sss.png)
 
 
 
